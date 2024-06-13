@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viataours</title>
+    
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.header, .hero, .popular-tours, .why-choose, .footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff7e1b;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero .search-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hero .search-bar input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.hero .search-bar button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff7e1b;
+    color: white;
+    cursor: pointer;
+}
+
+.popular-tours h2, .why-choose h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.popular-tours .tours {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.popular-tours .tour-card {
+    width: 200
+}
+</style>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Viataours</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tour</a></li>
+                    <li><a href="#">Destination</a></li>
+                    <li><a href="#">Activities</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <select name="currency" id="currency">
+                    <option value="USD">USD</option>
+                    
+                </select>
+                <button>Help</button>
+                <button>Sign Up</button>
+                <button>Log In</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Life Is Adventure Make The Best Of It</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Where">
+            <input type="text" placeholder="Date">
+            <input type="text" placeholder="Tour Type">
+            <button>Search</button>
+        </div>
+        <div class="landmarks">
+        
+        </div>
+    </section>
+
+    <section class="popular-tours">
+        <h2>Popular things to do</h2>
+        <div class="tours">
+            <div class="tour-card"> 
+                <img src="div.featureCard__image.png" alt="Cruises">
+                <h3>Cruises</h3>
+            </div>
+            <div class="tour-card">
+                <img src="div.featureCard.png" alt="Beach Tours">
+                <h3>Beach Tours</h3>
+            </div>
+            <div class="tour-card">
+                <img src="div.featureCard.png" alt="City Tours">
+                <h3>City Tours</h3>
+            </div>
+            <div class="tour-card">
+                <img src="featureCard__image.png" alt="Museum Tours">
+                <h3>Museum Tours</h3>
+            </div>
+            <div class="tour-card">
+                <img src="div.feature.png" alt="Food">
+                <h3>Food</h3>
+            </div>
+            <div class="tour-card">
+                <img src="div.fea.png" alt="Hiking">
+                <h3>Hiking</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <h2>Why choose Tourz</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <h3>Ultimate flexibility</h3>
+                <p>You're in control, with free cancellation and payment options to satisfy any plan or budget.</p>
+            </div>
+            <div class="benefit">
+                <h3>Memorable experiences</h3>
+                <p>Browse and book tours and activities so incredible, you'll want to tell your friends.</p>
+            </div>
+            <div class="benefit">
+                <h3>Quality at our core</h3>
+                <p>High-quality standards. Millions of reviews. A tour company.</p>
+            </div>
+            <div class="benefit">
+                <h3>Award-winning support</h3>
+                <p>Have peace of mind with the problem, we're here to help, 24/7.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
