@@ -1,0 +1,7 @@
+[Browsing] --(Select Product)--> [Viewing Product]
+[Viewing Product] --(Add to Cart)--> [Adding to Cart]
+[Adding to Cart] --(Success)--> [Cart]
+[Cart] --(Proceed to Checkout)--> [Checkout]
+[Checkout] --(Enter Payment Info)--> [Payment]
+[Payment] --(Submit Payment)--> [Order Confirmation]
+[Order Confirmation] --(Confirm Order)--> [Order Complete]
