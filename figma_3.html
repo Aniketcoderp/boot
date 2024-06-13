@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCI Researcher</title>
+    
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.hero img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+}
+
+.cta {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cta input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.cta button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.featured-work {
+    padding: 50px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.featured-work h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.work-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.work-gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.process {
+    padding: 50px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.process h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+}
+
+.step img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.contact {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">HCI Researcher</div>
+        <nav>
+            <ul>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Process</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="/boot/Depth 6, Frame 0.png" alt="Profile Picture">
+            <div class="hero-text">
+                <h1>I’m a user experience researcher and designer</h1>
+                <p>I work at the intersection of technology, design, and human behavior to create intuitive, human-centered experiences.</p>
+                <div class="cta">
+                    <input type="email" placeholder="Email address">
+                    <button>Get in touch</button>
+                </div>
+            </div>
+        </section>
+        <section class="featured-work">
+            <h2>Featured Work</h2>
+            <div class="work-gallery">
+                <img src="/boot/Depth 7, Frame 0.png" alt="Work 1">
+                <img src="/boot/Depth 7, Frame 0.png" alt="Work 2">
+                <img src="/boot/Depth 7, Frame 0.png" alt="Work 3">
+            </div>
+        </section>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I’m a user experience researcher and designer. I’m currently a PhD student in Human-Computer Interaction at Stanford University, where I work with James Landay and other amazing people in the HCI Group. My research focuses on understanding how people interact with AI systems, with the goal of designing more transparent, trustworthy, and equitable AI technologies. Before coming to Stanford, I worked as a UX designer and researcher at various tech companies and startups, including Google, Airbnb, and the MIT Media Lab. I’m also passionate about diversity and inclusion in tech, and have led several initiatives to promote equity and representation for underrepresented groups in the industry.</p>
+        </section>
+        <section class="process">
+            <h2>My Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <img src="/boot/8888.png" alt="Research">
+                    <p>Research</p>
+                </div>
+                <div class="step">
+                    <img src="/boot/8888.png" alt="Design">
+                    <p>Design</p>
+                </div>
+                <div class="step">
+                    <img src="/boot/8888.png" alt="Build">
+                    <p>Build</p>
+                </div>
+                <div class="step">
+                    <img src="/boot/8888.png" alt="Test">
+                    <p>Test</p>
+                </div>
+                <div class="step">
+                    <img src="/boot/8888.png" alt="Launch">
+                    <p>Launch</p>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Get in Touch</h2>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email address" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 HCI Researcher</p>
+    </footer>
+</body>
+</html>
