@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Rubik's Cube</title>
+    <style>body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #333;
+    }
+    
+    .cube {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        transform-style: preserve-3d;
+        transform: rotateX(-30deg) rotateY(-45deg);
+        animation: rotate 20s infinite linear;
+    }
+    
+    .face {
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+        gap: 2px;
+        width: 180px;
+        height: 180px;
+        background-color: #333;
+    }
+    
+    .face div {
+        width: 60px;
+        height: 60px;
+        border: 1px solid #000;
+    }
+    
+    .top    { transform: rotateX( 90deg) translateZ(90px); background: blue; }
+    .bottom { transform: rotateX(-90deg) translateZ(90px); background: green; }
+    .front  { transform: rotateY(  0deg) translateZ(90px); background: white; }
+    .back   { transform: rotateY(180deg) translateZ(90px); background: yellow; }
+    .left   { transform: rotateY(-90deg) translateZ(90px); background: orange; }
+    .right  { transform: rotateY( 90deg) translateZ(90px); background: red; }
+    
+    @keyframes rotate {
+        from { transform: rotateX(-30deg) rotateY(-45deg); }
+        to   { transform: rotateX(-30deg) rotateY(315deg); }
+    }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+    </div>
+</body>
+</html>
