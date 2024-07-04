@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.contanaior{
+            width: 100%;
+            height: auto;
+            background-color: black;
+            
+        }
+        div.contanaior>div:last-child{
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            padding-bottom: 40px;
+        }
+        div.contanaior>div:last-child>div:first-child{
+            width: 200px;
+            height: 300px;
+            background-color: yellow;
+        }
+        div.contanaior>div:last-child>div:nth-child(2){
+            width: 200px;
+            height: 300px;
+            background-color: pink;
+        }
+        div.contanaior>div:last-child>div:nth-child(3){
+            width: 200px;
+            height: 300px;
+            background-color: red;
+        }
+        div.contanaior>div:last-child>div:nth-child(4){
+            width: 200px;
+            height: 300px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="contanaior">
+        <div style="display: flex; justify-content: center; font-size: 50px; font-weight: 700; color: rgb(158, 129, 134);margin: 30px;">Cards</div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
