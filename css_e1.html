@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            box-sizing: border-box;
+        }
+        .cont{
+            margin: auto;
+            width: 1000px;
+            height: 1000px;
+            background-color: rgb(244, 90, 90);
+            padding: 30px;
+        }
+        form{
+            background-color: #FFFF;
+            width: 400px;
+            margin-left: 270px;
+            padding: 40px;
+            border-radius: 20px;
+        }
+        select{
+         padding:5px 170px;
+         border-radius: 5px;
+        }
+        #message{
+            width: 400px;
+            height: 70px;
+            border-radius: 5px;
+        }
+        #Age{
+            width: 400px;
+            height: 25px;
+            border-radius: 5px; 
+        }
+        #email{
+            width: 400px;
+            height: 25px;
+            border-radius: 5px;
+        }
+        #password{
+            width: 400px;
+            height: 25px;
+            border-radius: 5px;
+        }
+        #url{
+            width: 400px;
+            height: 25px;
+            border-radius: 5px;
+        }
+        #submit{
+            padding: 10px 15px;
+            border: none;
+            background-color: rgb(67, 225, 67);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h1 style="text-align: center;">Feedback form</h1>
+        <form action="">
+            <form action="">
+                <label for="Feedback"><b>Feedback:<b></b></label><br>
+                <select name="" id="Feedback">
+                    <option value="#">website</option>
+                    <option value="#">woking</option>
+                    <option value="#">function </option>
+                    <option value="#">other</option>
+                    <option value="#">none</option>
+                </select>
+                <br>
+                <br>
+                <label for="msg">Message:</label>
+                <br>
+                <input type="textarea" id="message" name="message" >
+                <br>
+                <br>
+                <p>Website Rating:</p>
+                <div>
+                    <input type="radio" id="r" name="drone" />
+                    <label for="r">*</label>
+                    <input type="radio" id="r2" name="drone" />
+                    <label for="r2">**</label>
+                    <input type="radio" id="r3" name="drone" />
+                    <label for="r3">***</label>
+                    <input type="radio" id="r4" name="drone" />
+                    <label for="r4">****</label>
+                    <input type="radio" id="r5" name="drone" />
+                    <label for="r5">*****</label>
+                  </div>
+                  <br>
+                  <br>
+                  <label for="Age">Age</label>
+                  <br>
+                  <input type="number" id="Age" min="10" max="100">
+                  <br>
+                  <br>
+                  <label for="email">email</label>
+                  <br>
+                  <input type="email" id="email" required>
+                  <br>
+                  <label for="password">password</label>
+                  <br>
+                  <input type="password" id="password" minlength="8" required>
+                  <br>
+                  <br>
+                  <label for="url">Url</label>
+                  <br>
+                  <input type="url" name="url" id="url" placeholder="https://example.com">
+                  <br>
+                  <br>
+    <input type="checkbox" id="horns" name="horns" />
+    <label for="horns"><b>I agree with the terms and  condition</b></label>
+                  <br>
+                  
+                  <div style="text-align: center;"><input type="submit" value="Submit"  id="submit" /></div>
+        
+            </form>
+        </form>
+    </div>
+</body>
+</html>
