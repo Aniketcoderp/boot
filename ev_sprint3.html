@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font-family: "Inter Tight", sans-serif;
+        }
+        .nav_cont{
+            width: 1220px;
+            height: auto;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .nav_cont>button{
+            background-color: transparent;
+            padding: 15px;
+            border: 0.5px  solid rgb(208, 188, 188);
+            font-weight: 600;
+        }
+        .nav_cont>h1{
+            font-size: 45px;
+            margin: auto;
+            font-weight: 900;
+        }
+        .lower_nav_cont{
+            width: 1220px;
+            height: auto;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .lower_nav_cont>span{
+            font-size: 14px;
+            margin-left: 30px;
+            padding: 20px;
+        }
+        .main_cont{
+            margin: auto;
+            width: 1220px;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-areas: "q1 q2 q2"
+                                " q4 q2 q2"
+                                " q7 q8 q9";
+
+            gap: 20px;
+            padding-top: 50px;
+
+        }
+
+        .main_cont>div:nth-child(1){
+            grid-area: q1;
+            padding-top: 30px;
+        }
+        .main_cont>div:nth-child(2){
+            grid-area: q2;
+
+        }
+        .main_cont>div:nth-child(3){
+            grid-area: q3;
+            display: none;
+        }
+        .main_cont>div:nth-child(4){
+            grid-area: q4;
+        }
+        .main_cont>div:nth-child(5){
+            grid-area: q5;
+            display: none;
+        }
+        .main_cont>div:nth-child(6){
+            grid-area: q6;
+            display: none;
+        }
+        .main_cont>div:nth-child(7){
+            grid-area: q7;
+        }
+        .main_cont>div:nth-child(8){
+            grid-area: q8;
+        }
+        .main_cont>div:nth-child(9){
+            grid-area: q9;
+        }
+        .main_cont>div:nth-child(2)>img{
+            width: 808px;
+            height: 420px;
+            border-radius:10px ;
+        }
+        .main_cont>div:nth-child(1)>p{
+            font-size: 30px;
+            margin-top: 10px;
+        }
+        .main_cont>div:nth-child(1)>span{
+            border: 1px solid  rgb(208, 188, 188);
+            padding: 7px;
+            font-size: 10px;
+            border-radius: 10px;
+        }
+        .main_cont>div:nth-child(4)>p:nth-child(1){
+            margin-top: 90px;
+        }
+        .main_cont>div:nth-child(4)>p:nth-child(2){
+            margin-top: 10px;
+            font-size: 12px;
+            color: rgb(83, 79, 79);
+        }
+        .main_cont>div:nth-child(7)>img{
+                    width: 395px;
+                    height: 220px;
+                    border-radius: 10px;
+                    margin-bottom: 15px;
+        }
+        .main_cont>div:nth-child(7)>span:nth-child(2){
+                    font-size: 20px;
+                    
+                    
+        }
+        .main_cont>div:nth-child(7)>p{
+                    margin-top:20px;
+                    margin-bottom: 20px;
+                    
+        }
+        .main_cont>div:nth-child(7)>span:nth-child(4){
+                    font-size: 10px;
+                    
+        }
+        .main_cont>div:nth-child(8)>img{
+                    width: 395px;
+                    height: 220px;
+                    border-radius: 10px;
+                    margin-bottom: 15px;
+        }
+        .main_cont>div:nth-child(8)>span:nth-child(2){
+                    font-size: 20px;
+                    
+                    
+        }
+        .main_cont>div:nth-child(8)>p{
+                    margin-top:20px;
+                    margin-bottom: 20px;
+                    
+        }
+        .main_cont>div:nth-child(8)>span:nth-child(4){
+                    font-size: 10px;
+                    
+        }
+        .main_cont>div:nth-child(9)>img{
+                    width: 395px;
+                    height: 220px;
+                    border-radius: 10px;
+                    margin-bottom: 15px;
+        }
+        .main_cont>div:nth-child(9)>span:nth-child(2){
+                    font-size: 20px;
+                    
+                    
+        }
+        .main_cont>div:nth-child(9)>p{
+                    margin-top:20px;
+                    margin-bottom: 20px;
+                    
+        }
+        .main_cont>div:nth-child(9)>span:nth-child(4){
+                    font-size: 10px;
+                    
+        }
+        .section_cont{
+            margin: auto;
+            width: 1220px;
+            height: auto;
+            padding-top: 30px;
+            margin-bottom: 30px;
+            
+
+        }
+        .section_cont>p{
+            font-size: 40px;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            
+        }
+        .section_flex{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .section_flex>div:nth-child(1){
+            width: 250px;
+            height: auto;
+        }
+        .section_flex>div:nth-child(1)>img{
+            width: 100%;
+            border-radius: 15px;
+        }
+        .section_flex>div:nth-child(1)>p{
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        .section_flex>div:nth-child(1)>span{
+            font-size: 10px;
+            
+        }
+        .section_flex>div:nth-child(2){
+            width: 250px;
+            height: auto;
+        }
+        .section_flex>div:nth-child(2)>img{
+            width: 100%;
+            border-radius: 15px;
+        }
+        .section_flex>div:nth-child(2)>p{
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        .section_flex>div:nth-child(2)>span{
+            font-size: 10px;
+            
+        }
+        .section_flex>div:nth-child(3){
+            width: 250px;
+            height: auto;
+        }
+        .section_flex>div:nth-child(3)>img{
+            width: 100%;
+            border-radius: 15px;
+        }
+        .section_flex>div:nth-child(3)>p{
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        .section_flex>div:nth-child(3)>span{
+            font-size: 10px;
+        
+        }
+        .section_flex>div:nth-child(4){
+            width: 250px;
+            height: auto;
+        }
+        .section_flex>div:nth-child(4)>img{
+            width: 100%;
+            border-radius: 15px;
+        }
+        .section_flex>div:nth-child(4)>p{
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        .section_flex>div:nth-child(4)>span{
+            font-size: 10px;
+            
+        }
+        .foot_cont{
+            margin: auto;
+            width: 1220px;
+            display: flex;
+            padding-top: 50px;
+            justify-content: space-between;
+            padding: 50px 20px;
+            color: white;
+            background-color: transparent;
+        }
+        .foot_cont>div:nth-child(1){
+            width: 150px;
+            height: auto;
+        }
+ul{
+    list-style-type: none;
+}
+
+
+.foot_cont>div:nth-child(2){
+            width: 150px;
+            height: auto;
+        }
+        .foot_cont>div:nth-child(3){
+            width: 150px;
+            height: auto;
+        }
+        .foot_cont>div:nth-child(4){
+            width: 250px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        li{
+        margin-top: 10px;
+        }
+        .uperfoot_cont{
+            margin: auto;
+            width: 1220px;
+            height: auto;
+            display: flex;
+            gap: 20px;
+            margin-bottom: 50px;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        .uperfoot_cont>div:nth-child(1){
+            width: 600px;
+            background-color: rgb(196,224,251);
+            border-radius: 20px;
+            padding: 30px;
+            
+        }
+       
+        .uperfoot_cont>div:nth-child(1)>p:nth-child(2){
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+        .uperfoot_cont>div:nth-child(1)>p:nth-child(3){
+            font-size: 20px;
+            
+
+        }
+       .input_uperfoot{
+        margin-top: 50px;
+        margin-left: 40px;
+       }
+       .input_uperfoot>input{
+        width: 290px;
+        height: 35px;
+        border-radius: 5px;
+        border: none;
+       }
+       .input_uperfoot>button{
+        width: 140px;
+        height: 35px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+       }
+   .unique_flex{
+    margin: auto;
+    width: 1220px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    gap:30px;
+    justify-content: center;
+   }
+   .unique_flex>div:nth-child(1){
+    width: 700px;
+    height: auto;
+   }
+   .unique_flex>div:nth-child(1) img{
+    width: 100%;
+    border-radius: 15px;
+    
+   }
+   .unique_flex>div:nth-child(2){
+     width: 390px;
+       height: auto;
+   }
+   .unique_flex>div:nth-child(2) img{
+     width: 100%;
+     border-radius: 15px;
+       
+   }
+   .pra1{
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+   }
+   .pra2{
+    font-size: 18px;
+   }
+   .pra3{
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+   }
+   .pra4{
+    font-size: 16px;
+   }
+        
+
+       
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_cont">
+            <h1>Journax</h1>
+            <button>Subscribe</button>
+        </div>
+        <hr>
+        <div class="lower_nav_cont">
+            <span>Health</span>
+            <span>Politics</span>
+            <span>Sports</span>
+            <span>World News</span>
+            <span>Business</span>
+            <span>Technology</span>
+            <span>Cart(0)</span>
+        </div>
+        <hr>
+    </nav>
+    <main>
+        <div class="main_cont">
+            <div>
+                <span>World News</span>
+                <p>Unveiling the stories & significance of historic landmarks
+
+            </p></div>
+            <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb0b7962fe6b39d24c427_news-main-13.jpg" alt=""></div>
+            <div></div>
+            <div>
+                <p>Discover the rich heritage, architectural marvels, and pivotal events that have shaped these iconic sites. Through our in-depth coverage, gain a deeper appreciation for the legacy.</p>
+                <p>Marvin McKinney - June 29, 2024</p>
+            </div>
+            <div></div>
+            <div></div>
+            <div>
+                <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb0e29ed33b549f7d769c_news-thumb-14-p-500.jpg" alt="">
+                <span>Advancements in electric vehicle technology</span>
+                <p>Explore the latest innovations shaping the future of electric vehicles. From cutting-edge battery technologies to advancements in autonomous driving.</p>
+                <span>Wade Warren</span>
+            </div>
+            <div>  <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb1252d8c203c005b88fe_news-thumb-15-p-500.jpg" alt="">
+                <span>The rise of next-gen sports stars</span>
+                <p>From breakthrough performances to inspiring stories, we spotlight the next generation of athletes making waves in the sports world.</p>
+                <span>Leslie Alexander</span></div>
+            <div>  <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb15df0b53dd34be6a682_news-thumb-16-p-500.jpg" alt="">
+                <span>Tech giant acquires AI startup for $2 billion</span>
+                <p>Acquired an AI startup for $2 billion, aiming to enhance its technological capabilities and expand its influence in the artificial intelligence sector.</p>
+                <span>Theresa Webb</span></div>
+
+        </div>
+    </main>
+   
+    <section>
+        <div class="section_cont">
+            <hr style="height: 2px;
+            background-color: black;">
+            <p>Editor's Choice</p>
+            <div class="section_flex">
+                <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa6660746e795774eb436_editor-news-01.jpg" alt="">
+                <p>International community expresses hope for resolution</p>
+                <span>World News</span>
+                </div>
+                <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa71e7dde9e3d024847d7_editor-news-02.jpg" alt="">
+                    <p>Season's most dramatic races</p>
+                    <span>World News</span></div>
+                <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa762dba43638cc6ed29d_editor-news-03.jpg" alt="">
+                    <p>Innovations driving the future of transportation</p>
+                    <span>World News</span></div>
+                <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa7b9c213d85ea6857b50_editor-news-04.jpg" alt="">
+                    <p>Supply chain disruptions challenges and solutions for businesses worldwide</p>
+                    <span>World News</span></div>
+
+            </div>
+        </div>
+
+        <div style="margin-top:100px ; margin-bottom: 50px;">
+            <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb1252d8c203c005b88fe_news-thumb-15-p-500.jpg" alt="" width="100%" height="700px">
+        </div>
+    </section>
+    <section>
+        <div class="unique_flex">
+            <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d352670fefb0f3ab47c18_news-main-02.jpg" alt="">
+                <p class="pra1">UN report highlights growing threat of food insecurity in developing nations</p>
+            <p class="pra2">Welcome to Journax, your trusted source for breaking news, in-depth analysis, and insightful commentary. Stay informed with our up-to-the-minute coverage on politics, business, technology, sports, entertainment, and more. Our mission is to deliver reliable news that matters to you, when it matters most.</p>
+            </div>
+         <div>
+            <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb3aba694ed3ca5f4b3d4_news-thumb-27-p-800.jpg" alt="">
+            <p class="pra3"> Global leaders convene to discuss new trade agreements, aim to strengthen economic cooperation</p>
+            <p class="pra4">Welcome to Journax, your trusted source for breaking news, in-depth analysis, and insightful commentary. Stay informed with our up-to-the-minute coverage on politics, business, technology, sports, entertainment, and more. Our mission is to deliver reliable news that matters to you, when it matters most.
+
+                </p>
+         </div>
+
+        </div>
+    </section>
+    
+    <section>
+        <div class="section_cont">
+            <hr style="height: 2px;
+            background-color: black;">
+            <p>Staff Writers</p>
+            <div class="section_flex">
+                <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d0511259c918e72509691_author-main-01-p-500.jpg" alt="">
+                    <p>Theresa Webb</p>
+                    <div style="font-size: 14px;">Senior Reporter</div>
+                </div>
+                <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d0539f5cd6d3a8e8f15a0_author-main-02-p-500.jpg" alt="">
+                    <p>Marvin McKinney
+                        </p>
+                    <div style="font-size: 14px;">Publisher</div>
+                </div>
+                <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d056c783d376b3fe21bb7_author-main-03-p-500.jpg" alt="">
+                    <p>Wade Warren
+                        </p>
+                    <div style="font-size: 14px;">Content Writer</div>                
+                </div>
+                <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d058ec1e876bede9c10b2_author-main-04-p-500.jpg" alt="">
+                    <p>Theresa Webb</p>
+                    <div style="font-size: 14px;">Editorialist
+                        </div></div>
+
+            </div>
+        </div>
+    </section>
+    <div class="uperfoot_cont">
+        <div><p>Subscribe Our Newsletter</p>
+        <p >Empower yourself subscribe to our expert analysis and insights</p>
+            <p>From breaking news to thought-provoking opinion pieces, our newsletter keeps you informed.
+            </p>
+
+            <div class="input_uperfoot">
+              <input type="text"> <button>Subscribe Now</button>
+            </div>
+        
+        </div>
+        <div><img src="https://cdn.prod.website-files.com/660fedec1ab54b2595c51e30/667d0971bf5cc7d1c3d3ff9c_cta-mobile.png" alt=""></div>
+    </div>
+
+
+
+
+
+     <footer style="background-color: rgb(16, 15, 15);">
+        <div class="foot_cont">
+            <div>
+                <ul>
+                    <h3>Pages</h3>
+                    <li>About us</l>
+                        <li>News</li>
+                       <li>Authors</li> 
+                        <li>Newsletter Plans</li>
+                        <li>Contact us</li>
+                       <li> Sign Up</li>
+                </ul>
+            </div>
+        
+            <div>
+                <ul>
+                    <h3>Category</h3>
+                    <li>Health </l>
+                        <li>Politics</li>
+                       <li>Sports</li> 
+                        <li>World News</li>
+                        <li>Business </li>
+                       <li> Technology</li>
+                </ul>
+            </div>
+    
+        <div>
+            <ul>
+                <h3> Resources</h3>
+                <li>Privacy Policy </l>
+                    <li>Advertise</li>
+                   <li>Terms & Conditions</li> 
+                    <li>License</li>
+                    <li>Style Guide</li>
+            </ul>
+        </div>
+    
+    <div>
+        <div>
+        <p style="text-align: end; margin-bottom: 10px; ">info@example.com</p>
+        <input type="text" placeholder="Advertise with us" style=" width: 300px; height: 35px; padding-left: 10px;">
+        </div>
+    </div>
+</div>
+<hr>
+<div style="display: flex;justify-content: space-between; padding: 20px;">
+    <h1 style="color: white; margin-left: 20px;">Journax</h1>
+    <div style="color: gray; margin-right: 100px; font-size: 14; display: flex;align-items: end;">© 2024 JournaX.
+        Designed by</div>
+</div>
+
+
+     </footer>
+     
+     
+     
+     
+    
+
+
+
+
+
+     
+   
+</body>
+</html>
+
+
+
+
+
+
