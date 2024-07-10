@@ -5,38 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-  .card{
-    width: 300px;
-    height: 500pxpx;
-    display: inline-block;
-    box-shadow: 0.2px 0.5px 1px;
-    margin-left: 20px;
-    
-  }
-  
+    .cont{
+      width: 1220px;
+      height: 500px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows:repeat(4,1fr);
+      gap: 10px;
+    }
+
+    .cont>div{
+      
+      background-color: yellowgreen;
+    }
+    @media(max-width:750px){
+      .cont{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows:repeat(3,1fr);
+      gap: 10px;
+    }
+    }
   </style>
 </head>
 <body>
-  
-  <div class="card">
-    <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
-    <h5 style="text-align: center;">Vijay Shekhar Sharma</h5>
-    <p style="text-align: center;">Founder & CEO</p>
-  </div>
-  <div class="card">
-    <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
-    <h5 style="text-align: center;">Vijay Shekhar Sharma</h5>
-    <p style="text-align: center;">Founder & CEO</p>
-  </div>
-  <div class="card">
-    <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
-    <h5 style="text-align: center;">Vijay Shekhar Sharma</h5>
-    <p style="text-align: center;">Founder & CEO</p>
-  </div>
-  <div class="card">
-    <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
-    <h5 style="text-align: center;">Vijay Shekhar Sharma</h5>
-    <p style="text-align: center;">Founder & CEO</p>
+  <div class="cont">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
 </body>
 </html>
