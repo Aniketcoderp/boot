@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-image: url('./Frame.png');
+            width: 1920px;
+height: 860px;
+gap: 0px;
+opacity: 0px;
+margin: auto;
+
+
+        }
+        div.cont {
+            width: 1320px;
+            height: 600px;
+            margin: auto;
+        }
+        div.cont > h1 {
+            font-family: Inter, sans-serif;
+            font-size: 29.88px;
+            font-weight: 700;
+            line-height: 45px;
+            color: #05073C;
+        }
+        .grid {
+            width: 100%;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-areas: "q1 q1 q1";
+        }
+        .grid>div{
+            border: 1px solid;
+        }
+        .grid>div:nth-child(1){
+            grid-area: q1;
+        }
+    </style>
+</head>
+<body>
+    <nav></nav>
+    <div class="cont">
+        <h1>Popular things to do</h1>
+        <div class="grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

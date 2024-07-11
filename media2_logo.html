@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .cont{
+            width: 1220px;
+            height: 600px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas:"q1 q2"
+                                "q1 q2"
+                                
+                                "q1 q2"
+                                "q1 q2"
+                                "q3 q3";
+        }
+        .cont>div{
+            border: 1px solid;
+        }
+        .cont>div:nth-child(1){
+            grid-area: q1;
+            display: grid;
+            place-items: center;
+            background-color: rgb(1, 2, 110);
+        }
+
+        .cont>div:nth-child(2){
+            grid-area: q2;
+        }
+        .cont>div:nth-child(3){
+            grid-area: q3;
+            display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(31, 26, 26);
+    color: white;
+    text-decoration: none;
+    
+        }
+        .cont>div:nth-child(4){
+            grid-area: q4;
+            display: none;
+        }
+        .cont>div:nth-child(5){
+            grid-area: q5;
+            display: none;
+        }
+        .cont>div:nth-child(6){
+            grid-area: q6;display: none;
+        }
+        .cont>div:nth-child(7){
+            grid-area: q7;display: none;
+        }
+        .cont>div:nth-child(8){
+            grid-area: q8;display: none;
+        }
+        .cont>div:nth-child(9){
+            grid-area: q9;display: none;
+        }
+        .cont>div:nth-child(10){
+            grid-area: q10;display: none;
+        }
+        div.cont>div:nth-child(3)>div:first-child>span{
+    margin-left: 20px;
+    font-size: 20px;
+    color: white;
+  }
+  div.cont>div:nth-child(3)>div:last-child>a{
+    color: white;
+    font-size: 18px;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+.list{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(48, 64, 175);
+    color: white;
+    align-items: center;
+    
+    
+}
+ul{
+    list-style-type: none;
+}
+li{
+    margin-top: 20px;
+}
+@media (max-width:700px) {
+    .cont{
+           
+            grid-template-columns: repeat(1,1fr);
+            grid-template-areas:"q2 q2"
+                                "q2 q2"
+                                "q2 q2"
+                                "q1 q1"
+                                "q1 q1"
+                                "q3 q3";
+        }  
+        .cont>div:nth-child(3){
+        
+    justify-content: center;
+    align-items: center;
+
+}}
+@media (max-width:450px) {
+    .cont{
+           
+           grid-template-columns: repeat(1,1fr);
+           grid-template-areas:"q3 q3"
+                               "q2 q2"
+                               "q2 q2"
+                               "q2 q2"
+                               "q1 q1"
+                               "q1 q1";
+       }  
+       .cont>div:nth-child(3){
+    
+   justify-content: center;
+   align-items: center;
+}
+.list{
+    display:inline-block;
+    padding-top: 40px;
+    
+}
+li{
+    display: none;
+}
+}
+
+    </style>
+    
+
+</head>
+<body>
+    <div class="cont">
+        <div><img src="https://preview.redd.it/p5ebpc2seuw21.png?auto=webp&s=4297283f1cf369d60ac1f6b1a52636897f4db20a" alt="" width="20%"></div>
+        <div class="list">
+            <div >
+                <ul>
+                    <h4>Shope</h4>
+                    <li>Gift cards</li>
+                    <li>Etsy Registry</li>
+                    <li>Siteman</li>
+                    <li> Etsy US</li>
+                    <li>Etsy germany</li>
+                    <li>Etsy Canada</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h4>Shope</h4>
+                    <li>Gift cards</li>
+                    <li>Etsy Registry</li>
+                    <li>Siteman</li>
+                    <li> Etsy US</li>
+                    <li>Etsy germany</li>
+                    <li>Etsy Canada</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h4>Shope</h4>
+                    <li>Gift cards</li>
+                    <li>Etsy Registry</li>
+                    <li>Siteman</li>
+                    <li> Etsy US</li>
+                    <li>Etsy germany</li>
+                    <li>Etsy Canada</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h4>Shope</h4>
+                    <li>Gift cards</li>
+                    <li>Etsy Registry</li>
+                    <li>Siteman</li>
+                    <li> Etsy US</li>
+                    <li>Etsy germany</li>
+                    <li>Etsy Canada</li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        <div>
+            <div><span>India</span><span>english</span><span>Inr</span> </div>
+            <div><a href="">Terms of Use</a><a href="">Privacy</a><a href="">Privacy</a><a href="">nterest-based ads</a><a href="">local shops Regions</a>
+                 </div>
+          </div>
+    
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+    </div>
+</body>
+</html>
