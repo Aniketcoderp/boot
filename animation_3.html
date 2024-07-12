@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#box{
+            width: 1250px;
+            height: 800px;
+            margin: auto;
+            background-color: rgb(11, 10, 10);
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+        }
+        div#box>div{
+            width: 300px;
+            height: 333px;
+            border-radius: 4px;
+            border: 5px solid pink;
+            box-shadow: 0 0 5px 10px pink;
+            animation: q1 1s infinite;
+    
+        }
+        @keyframes q1{
+            100%{
+            transform: scale(1.9);
+            border: 10px solid rgb(184, 36, 90);
+            box-shadow: 10px 10px 90px 10px pink; 
+        }}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>
+
+        </div>
+
+    </div>
+</body>
+</html>
