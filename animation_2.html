@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.contanior{
+            width: 1250px;
+            height: auto;
+            padding-bottom: 40px;
+            margin: auto;
+            
+        }
+       
+
+        div#box{
+            width: 100%;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin: auto;
+            gap: 5px;
+            grid-template-areas: "q1 ."
+                                ". q2"
+                                "q3 ."
+                                ". q4" ; 
+
+        }
+    
+        div#box>div{
+            width: 2px;
+            border: 2px solid   black;
+            background-color: #091277;
+            background-image: linear-gradient(90deg, #091277 0%, #53b5aa 100%);
+            border-radius:10px;
+            
+            
+        }
+        div#box>div:nth-child(1){
+            grid-area: q1;
+            animation: a1 2s forwards;
+        }
+        div#box>div:nth-child(2){
+            grid-area: q2;
+            animation: a2 2s forwards;
+        }
+        div#box>div:nth-child(3){
+            grid-area: q3;
+            animation: a1 2s forwards;
+        }
+        div#box>div:nth-child(4){
+            grid-area: q4;
+            animation: a1 2s forwards;
+        }
+        div#box>div:nth-child(5){
+            grid-area: q5;
+            display: none;
+        }
+        div#box>div:nth-child(6){
+            grid-area: q6;
+            display: none;
+        }
+        div#box>div:nth-child(7){
+            grid-area: q7;
+            display: none;
+        }
+        div#box>div:nth-child(8){
+            grid-area: q8;
+            display: none;
+        }
+        @keyframes a1{
+    100%{
+        width: 550px;
+    }}
+    @keyframes a2{
+    100%{
+        width: 550px;
+    }}
+       
+
+    </style>
+</head>
+<body>
+    <div class="contanior">
+        <div id="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    </div>
+</body>
+</html>
