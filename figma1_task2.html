@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         nav{
-            background-image: url('./Frame.png');
+          
             width: 1920px;
 height: 860px;
 gap: 0px;
@@ -16,9 +16,10 @@ margin: auto;
 
         }
         div.cont {
-            width: 1320px;
+            width: 1000px;
             height: 600px;
             margin: auto;
+            padding-top: 50px;
         }
         div.cont > h1 {
             font-family: Inter, sans-serif;
@@ -29,24 +30,139 @@ margin: auto;
         }
         .grid {
             width: 100%;
-            height: 400px;
+            height: 30px;
             display: grid;
+            margin: auto;
             grid-template-columns: repeat(8, 1fr);
-            grid-template-areas: "q1 q1 q1";
-        }
-        .grid>div{
-            border: 1px solid;
-        }
+            grid-template-areas: "q1 q1 q1 q2 q2 q3 q3 q3"
+                                    "q1 q1 q1 q11 q11 q13 q14 q14";
+        gap: 20px;
+        
+                                }
+        
         .grid>div:nth-child(1){
             grid-area: q1;
+
+        }
+        .grid>div:nth-child(1) img{
+            width: 100%;
+            border-radius: 10px;
+
+         } 
+        .grid>div:nth-child(2){
+            grid-area: q2;
+            
+        }
+        .grid>div:nth-child(2) img{
+            width: 100%;
+            height: 100%;
+            
+            border-radius: 10px;
+
+         } 
+        .grid>div:nth-child(3){
+            grid-area: q3;
+        }
+        .grid>div:nth-child(3) img{
+            width: 100%;
+            height: 100%;
+            
+            border-radius: 10px;
+
+         } 
+        .grid>div:nth-child(4){
+            grid-area: q4;
+            display: none;
+        }
+        .grid>div:nth-child(5){
+            grid-area: q4;
+            display: none;
+        }
+        .grid>div:nth-child(6){
+            grid-area: q5;
+            display: none;
+        }
+        .grid>div:nth-child(7){
+            grid-area: q6;
+            display: none;
+        }
+        .grid>div:nth-child(8){
+            grid-area: q7;
+            display: none;
+        }
+        .grid>div:nth-child(9){
+            grid-area: q8;
+            display: none;
+        }
+        .grid>div:nth-child(10){
+            grid-area: q9;display: none;
+        }
+        .grid>div:nth-child(11){
+            grid-area: q11;
+        }
+        .grid>div:nth-child(11) img{
+            width: 100%;
+            height: 100%;
+            
+            border-radius: 10px;
+
+         } 
+        .grid>div:nth-child(12){
+            grid-area: q12;
+            display: none;
+        }
+        .grid>div:nth-child(13){
+            grid-area: q13;
+        }
+        .grid>div:nth-child(13) img{
+            width: 100%;
+            height: 100%;
+            
+            border-radius: 10px;
+
+         } 
+        .grid>div:nth-child(14){
+            grid-area: q14;
+        }
+        .grid>div:nth-child(14) img{
+            width: 100%;
+            height: 100%;
+            
+            border-radius: 10px;
+
+         } 
+        .grid>div:nth-child(15){
+            grid-area: q15;
+            display: none;
+        }
+        .grid>div:nth-child(16){
+            grid-area: q16;
+            display: none;
+        }
+        .cont2{
+            font-family: Inter, sans-serif;
+            width: 1000px;
+            height: auto;
+            margin: auto;
+        }
+        .flex{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .flex>div{
+            width: 220px;
         }
     </style>
 </head>
 <body>
-    <nav></nav>
+    <nav><img src="./Frame.png" alt=""></nav>
     <div class="cont">
         <h1>Popular things to do</h1>
         <div class="grid">
+            <div> <img src="./div.featureCard__image (1).png" alt=""></div>
+            <div><img src="./Link.png" alt=""></div>
+            <div><img src="./div.featureCard__image (2).png" alt=""></div>
             <div></div>
             <div></div>
             <div></div>
@@ -54,15 +170,45 @@ margin: auto;
             <div></div>
             <div></div>
             <div></div>
+            <div> <img src="./Link 2.png" alt=""></div>
+            <div></div>
+            <div><img src="./Link3.png" alt=""></div>
+            <div><img src="./Link 2.png" alt=""></div>
             <div></div>
             <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        </div>
+    </div>
+    <div class="cont2">
+        <h1>Why choose Tourz</h1>
+        <div class="flex">
+            <div>
+                <img src="./ticket.svg fill.png" alt="">
+                <h5>Ultimate flexibility</h5>
+                <p>Browse and book tours and activities
+                    so incredible, you'll want to tell your
+                    friends.</p>
+            </div>
+            <div>
+                <img src="./ticket.svg fill.png" alt="">
+                <h5>Ultimate flexibility</h5>
+                <p>Browse and book tours and activities
+                    so incredible, you'll want to tell your
+                    friends.</p>
+            </div>
+            <div>
+                <img src="./ticket.svg fill.png" alt="">
+                <h5>Ultimate flexibility</h5>
+                <p>Browse and book tours and activities
+                    so incredible, you'll want to tell your
+                    friends.</p>
+            </div>
+            <div>
+                <img src="./ticket.svg fill.png" alt="">
+                <h5>Ultimate flexibility</h5>
+                <p>Browse and book tours and activities
+                    so incredible, you'll want to tell your
+                    friends.</p>
+            </div>
         </div>
     </div>
 </body>
