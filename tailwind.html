@@ -28,11 +28,11 @@
     }
     .cont{
         width: 100%;
-        height: auto;
+        height: 600px;
         background-color: rgb(201, 197, 197);
-        padding-top:40px ;
-        padding-bottom: 40px;
-    }
+        
+        display: grid;
+    place-items: center;    }
     .card1{
         width: 800px;
         height: auto;
@@ -129,6 +129,26 @@
         }
         
     }
+    .flex2{
+        animation: a1 2s  ;
+        animation-timeline: scroll();
+       
+    }
+    @keyframes a1 {
+        40%{
+        transform:scale(0.5) ;
+    }
+      
+    75%{
+        
+        transform:scale(0.8) ;
+    }
+    100%{
+        transform:scale(1);
+    }
+      
+    }
+    
   </style>
 </head>
 <body class="bg-gray-200">
@@ -207,7 +227,7 @@
     
     
     
-    <div class="w-full bg-black py-12">
+    <div class="w-full bg-black py-12 flex2">
       <div class="w-72 mx-auto">
         <div class="flex items-center">
           <hr class="flex-grow border-pink-600">
@@ -215,7 +235,7 @@
           <hr class="flex-grow border-pink-600">
         </div>
       </div>
-      <div class="flex justify-center py-4">
+      <div class="flex justify-center py-4 ">
         <div class="col mx-2">
           <div class="card p-4">
             <img src="https://tse2.explicit.bing.net/th?id=OIP.qhaSFLWgvHXc02GIFoi-KgHaHa&pid=Api&P=0&h=180" class="w-44 h-52 rounded-lg mb-4" alt="Waterfall">
