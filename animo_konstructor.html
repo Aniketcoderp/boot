@@ -49,6 +49,19 @@
             color: white;
             font-weight: 700;
             margin-top: 100px;
+            animation: q1 2s;
+        }
+        @keyframes q1 {
+            50%{
+                display: none;
+            }
+            75%{
+                transform: scale(0.5);
+            }
+            100%{
+                transform: scale(1)
+            }
+            
         }
         nav>div>h1{
             width: 900px;
@@ -56,6 +69,16 @@
             color: white;
             font-size: 50px;
             margin: auto;
+            animation: q2 2s;
+        }
+        @keyframes q2 {
+            50%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: scale(1)
+            }
+            
         }
         nav>div>h1>span{
             color: rgb(255, 94, 21);
@@ -80,12 +103,26 @@
             width: 1220px;
             height: 750px;
             margin: auto;
+            animation: q3 2s infinite;
+            animation-timeline: scroll();
+             
+        }
+        @keyframes q3 {
+            50%{
+                transform: scale(0.5);
+            }
+            100%{
+                transform: scale(1);
+            }
+            
         }
         .main_cont>h1:nth-child(1){
             font-size: 140px;
             text-align: center;
             color: rgb(252, 247, 247);
+            animation: q1 2s;
         }
+        
         .main_cont>span{
             font-size: 35px;
             font-weight: 700;
@@ -127,7 +164,7 @@
     </div>
     </nav>
     <main>
-        <div class="main_cont">
+    <div class="main_cont">
         <h1>Homepages</h1>
         <span><span>03</span> Construction Homepages</span>
         <p>03 Different demos here with stunning design ready to start  for your next website.</p>
