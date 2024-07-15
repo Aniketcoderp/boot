@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/cb24d2ec33.js" crossorigin="anonymous"></script>
     <style>
        
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
@@ -14,17 +15,31 @@
             padding: 0px;
             font-family: "Inter Tight", sans-serif;
         }
+        nav{
+            position: sticky;
+            top:0px;
+            z-index: 2;
+            background-color: white;
+        }
         .nav_cont{
-            width: 1220px;
+            max-width: 1220px;
+            min-width: 520px;
             height: auto;
             margin: auto;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            
             
         }
+        .nav_cont>i{
+            padding: 0px;
+        }
+       
+
         .nav_cont>button{
             background-color: transparent;
-            padding: 15px;
+            padding: 18px;
             border: 0.5px  solid rgb(208, 188, 188);
             font-weight: 600;
         }
@@ -32,22 +47,80 @@
             font-size: 45px;
             margin: auto;
             font-weight: 900;
+            animation: h1 2s;
+        }
+        @keyframes h1 {
+            100%{
+                transform: rotate(360deg);
+
+            }
+            
         }
         .lower_nav_cont{
-            width: 1220px;
+            max-width: 1220px;
             height: auto;
             margin: auto;
             display: flex;
             justify-content: center;
+            animation: nav1 2s ;
         }
         .lower_nav_cont>span{
             font-size: 14px;
             margin-left: 30px;
             padding: 20px;
         }
+        
+        @media (max-width:750px){
+            .nav_cont{
+            justify-content: no;
+            
+        }
+            .nav_cont>button{
+           display: none;
+        }
+    
+        .nav_cont>h1{
+            text-align: end;
+            margin: 0px;
+            margin-right: 20px;
+        }
+        .nav_cont>i:active{
+            background-color:black;
+            color: white;
+        }
+        .lower_nav_cont{
+           display: none;       
+}
+.hr{
+    min-width: 800px;
+}}
+@media (max-width:400px){
+            .nav_cont>button{
+           display: none;
+           
+        }
+    
+        .nav_cont>h1{
+            text-align: end;
+            margin: 0px;
+            margin-right: 20px;
+        }
+        .nav_cont>i:active{
+            background-color:black;
+            color: white;
+        }
+        .lower_nav_cont{
+           display: none;       
+}
+.hr{
+    min-width: 550px;
+}
+}
+
+
         .main_cont{
             margin: auto;
-            width: 1220px;
+           max-width: 1220px;
             height: auto;
             display: grid;
             grid-template-columns: repeat(3,1fr);
@@ -57,8 +130,12 @@
 
             gap: 20px;
             padding-top: 50px;
+            animation: q1 2s;
+            animation-timeline:view() ;
+            
 
         }
+    
 
         .main_cont>div:nth-child(1){
             grid-area: q1;
@@ -66,7 +143,17 @@
         }
         .main_cont>div:nth-child(2){
             grid-area: q2;
+            animation: grid1 2s;
 
+        }
+        @keyframes grid1 {
+            50%{
+                transform: scale(1.2);
+            }
+            100%{
+                transform: scale(1);
+            }
+            
         }
         .main_cont>div:nth-child(3){
             grid-area: q3;
@@ -175,12 +262,47 @@
                     font-size: 10px;
                     
         }
+        @media (max-width:750px) {
+            .main_cont{
+            margin: auto;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: "q2 q2"
+                                " q2 q2 "
+                                "q1 q4"
+                                " q7 q8 "
+                                " q9 ."  
+        }
+    
+    }
+    @media (max-width:400px) {
+            .main_cont{
+            margin: auto;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: "q2 q2"
+                                " q2 q2 "
+                                "q1 ."
+                                " q4 . "
+                                " q7 ."
+                                "q8 ."
+                                "q9."  ;
+           margin-left:20px ;
+        }
+        .main_cont>div:nth-child(2)>img{
+            width: 100vh;
+            height: 420px;
+            border-radius:10px ;
+            
+        }
+    }
+
         .section_cont{
             margin: auto;
             width: 1220px;
             height: auto;
             padding-top: 30px;
             margin-bottom: 30px;
+            animation: q1 2s;
+            animation-timeline:view() ;
             
 
         }
@@ -191,11 +313,21 @@
             
         }
         .section_flex{
-            width: 100%;
+           width:1220px;
             height: auto;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
+        .section_flex>div{
+            transition: transform 2s;
+            
+
+        }
+        .section_flex>div:hover{
+            transform: scale(1.3);
+        }
+        
         .section_flex>div:nth-child(1){
             width: 250px;
             height: auto;
@@ -264,6 +396,17 @@
             font-size: 10px;
             
         }
+
+        @media(max-width:750px){
+            .section_flex{
+           width:100vw;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        }
+
+
         .foot_cont{
             margin: auto;
             width: 1220px;
@@ -273,6 +416,7 @@
             padding: 50px 20px;
             color: white;
             background-color: transparent;
+        
         }
         .foot_cont>div:nth-child(1){
             width: 150px;
@@ -302,6 +446,35 @@ ul{
         li{
         margin-top: 10px;
         }
+
+      @media (max-width:750px){
+        .foot_cont{
+            width: 90vw;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        li{
+            display: none;
+        }
+       .foot_icon{
+        margin-top: 40px;
+        
+       }
+      }
+      @media (max-width:400px){
+        .foot_cont{
+            width: 100vw;
+            flex-direction: column;
+            
+        }
+        li{
+            display: none;
+        }
+        .icon_input{
+           margin-left:50px ;
+        }
+      }
+
         .uperfoot_cont{
             margin: auto;
             width: 1220px;
@@ -311,6 +484,8 @@ ul{
             margin-bottom: 50px;
             justify-content: center;
             margin-top: 100px;
+            animation: q1 2s;
+            animation-timeline:view() ;
         }
         .uperfoot_cont>div:nth-child(1){
             width: 600px;
@@ -331,6 +506,42 @@ ul{
             
 
         }
+        .uperfoot_cont{
+            width: 100vw;
+            flex-wrap: wrap;
+        }
+        .uperfoot_cont>div:nth-child(1){
+ animation: uper1 2s;
+ animation-timeline:view() ;
+
+        }
+        .uperfoot_cont>div:nth-child(2){
+ animation: uper2 2s;
+ animation-timeline:view() ;}
+
+
+        @keyframes uper1 {
+            0%{
+                transform: translate(-400px);
+                opacity: 0;
+            }
+            50%{
+                transform: translate(0px);
+                opacity: 9;
+            }
+            
+        }
+        @keyframes uper2 {
+            0%{
+                transform: translate(400px);
+                opacity: 0;
+            }
+            50%{
+                transform: translate(0px);
+                opacity: 9;
+            }
+        }
+        
        .input_uperfoot{
         margin-top: 50px;
         margin-left: 40px;
@@ -339,7 +550,8 @@ ul{
         width: 290px;
         height: 35px;
         border-radius: 5px;
-        border: none;
+        background-color: transparent;
+        border: 1px solid;
        }
        .input_uperfoot>button{
         width: 140px;
@@ -358,7 +570,16 @@ ul{
     display: flex;
     gap:30px;
     justify-content: center;
+    animation: q1 2s;
+    animation-timeline:view() ;
    }
+   .unique_flex>div{
+    transition: transform 1s;
+        }
+    .unique_flex>div:hover{
+            transform: scale(1.3);
+        }
+   
    .unique_flex>div:nth-child(1){
     width: 700px;
     height: auto;
@@ -377,6 +598,13 @@ ul{
      border-radius: 15px;
        
    }
+   @media (max-width:750px){
+    .unique_flex{
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+   }
    .pra1{
     font-size: 30px;
     margin-top: 15px;
@@ -393,7 +621,105 @@ ul{
    .pra4{
     font-size: 16px;
    }
+.last_foot{
+    width: 1250px;
+    height: auto;
+
+    display: flex;justify-content: space-between; padding: 10px; margin: auto;
+}  
+
+@media(max-width:750px){
+    .last_foot{
+    width:100vw ;
+
+} 
+} 
+@media(max-width:400px){
+    .last_foot{
+    width:100vw ;
+    
+    flex-wrap:wrap ;
+    justify-content: center;
+
+
+}  
+    
+}
+.foot_icon{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    
+}
+.positon_prom{
+    max-width: 350px;
+    height: 250px;
+    background-color: white;
+    padding: 30px;
+    position: relative;
+    top: -500px;
+    left: 750px;
+    animation: pron 2s;
+    animation-timeline:view() ;
+
+}
+@keyframes pron {
+    0%{
+        transform: translate(400px);
+        opacity:-1;
+    }
+    50%{
+        transform: translate(0px);
+        opacity:2;
+    }
+
+    
+}
+@media (max-width:750px) {
+    .positon_prom{
+    display: none;
+
+}
+    
+}
+.positon_prom>p:nth-child(1){
+    
+    font-size: 22px;
+    font-weight: 600;
+
+}
+.positon_prom>p:nth-child(2){
+    color: gray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.positon_prom>span{
+    font-size: 14px;
+    margin-right: 40px;
+}
+@keyframes q1{
+    50%{
+        transform: scale(1);
+        opacity: 2;
         
+    }
+    100%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    
+}
+@keyframes nav1{
+    50%{
+      opacity: -1;
+    }
+    100%{
+        transform: translate(1200px);
+        opacity: 2;
+    }
+    
+}
+
 
        
 
@@ -402,10 +728,11 @@ ul{
 <body>
     <nav>
         <div class="nav_cont">
+            <i class="fa-solid fa-bars"></i>
             <h1>Journax</h1>
             <button>Subscribe</button>
         </div>
-        <hr>
+        <hr class="hr">
         <div class="lower_nav_cont">
             <span>Health</span>
             <span>Politics</span>
@@ -457,7 +784,7 @@ ul{
             <p>Editor's Choice</p>
             <div class="section_flex">
                 <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa6660746e795774eb436_editor-news-01.jpg" alt="">
-                <p>International community expresses hope for resolution</p>
+                <p> img International community expresses hope for resolution</p>
                 <span>World News</span>
                 </div>
                 <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa71e7dde9e3d024847d7_editor-news-02.jpg" alt="">
@@ -473,8 +800,15 @@ ul{
             </div>
         </div>
 
-        <div style="margin-top:100px ; margin-bottom: 50px;">
+        <div style="margin-top:100px ;  width: 100vw; ">
             <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb1252d8c203c005b88fe_news-thumb-15-p-500.jpg" alt="" width="100%" height="700px">
+            <div class="positon_prom">
+                <p>Advancements in electric vehicle technology</p>
+                <p>Explore the latest innovations shaping the future of electric vehicles. From cutting-edge battery technologies to advancements in autonomous driving.</p>
+                <span>June 29, 2024
+                    </span><span>Wade Warren</span>
+
+            </div>
         </div>
     </section>
     <section>
@@ -578,17 +912,22 @@ ul{
         </div>
     
     <div>
-        <div>
+        <div class="icon_input" >
+        <div class="foot_icon"><span><i class="fa-brands fa-x-twitter"></i></span>
+        <span><i class="fa-brands fa-facebook-f"></i></span>
+        <span><i class="fa-brands fa-instagram"></i></span>
+        <span><i class="fa-brands fa-instagram"></i></span>
+        <span><i class="fa-brands fa-spotify"></i></span>
+        </div>
         <p style="text-align: end; margin-bottom: 10px; ">info@example.com</p>
-        <input type="text" placeholder="Advertise with us" style=" width: 300px; height: 35px; padding-left: 10px;">
+        <input type="text" placeholder="Advertise with us" style=" width: 300px; height: 35px; padding-left: 10px; ">
         </div>
     </div>
 </div>
 <hr>
-<div style="display: flex;justify-content: space-between; padding: 20px;">
+<div class="last_foot" >
     <h1 style="color: white; margin-left: 20px;">Journax</h1>
-    <div style="color: gray; margin-right: 100px; font-size: 14; display: flex;align-items: end;">© 2024 JournaX.
-        Designed by</div>
+    <div style="color: gray; margin-right: 100px; font-size: 14; display: flex;align-items: end;">Designed by Nixar. Powered by Webflow.</div>
 </div>
 
 
